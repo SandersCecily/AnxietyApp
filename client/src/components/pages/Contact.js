@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import Form from "../../Form";
+import Form from "../Form";
 
 class Contact extends Component {
   render() {
@@ -14,7 +14,7 @@ class Contact extends Component {
               Feel free to fill it out and maybe you'll see your suggestion on our website!
           </h5>
             <br />
-            {/* <Form/> */}
+            <Form/>
           </div>
         </div>
       </div>

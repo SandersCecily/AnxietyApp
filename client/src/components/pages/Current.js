@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import API from "../../utils/API";
+import Filter from "../Filter";
 // import Filter from "../../Filter";
 
 // //randomize desc
@@ -72,7 +73,7 @@ class Current extends Component {
         </div>
         <div className="row">
           <div className="col s3 filter left-align pull-s2">
-            {/* <Filter /> */}
+            <Filter />
           </div>
           <div className="col s7 center-align" id="remedies">
             {/* Make a Favorite Star in Here */}

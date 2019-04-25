@@ -4,32 +4,40 @@ class Filter extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            location: "home",
+            location: "",
             noiselvl: 3,
             physicallvl: 3,
-            items: false
+            items: []
         }
+        this.handleInputChange = this.handleInputChange.bind(this);
     }
 
     handleInputChange = event => {
-        //if radio
-        //if range-field
-        //if checkbox
-        };
+        var target= event.target;
+        var value = target.type === 'checkbox' ? target.checked : target.value;
+        var name = target.name;
+        this.setState({[name]: value});
+        }
 
 
     handleFormSubmit = event => {
         event.preventDefault();
-        
+        alert("Roger roger! \n" 
+        +"Location: " +this.state.location + "\n"
+        +"Noise: " +this.state.noiselvl +"\n"
+        +"Physical: " +this.state.physicallvl +"\n"
+        +"Items: " +this.state.items);
     };
 
     render() {
         return (
+            <div className="container">
+            <div className ="row">
             <form action="#">
                 <label>I am at...</label>
                 <p>
                     <label>
-                        <input className="with-gap" name="location" type="radio" value ="Home" checked onChange={this.handleInputChange}/>
+                        <input className="with-gap" name="location" type="radio" value="home" onChange={this.handleInputChange}/>
                         <span>Home</span>
                     </label>
                 </p>
@@ -48,17 +56,17 @@ class Filter extends Component {
 
                 <label>Activity Noise Level</label>
                 <p className="range-field">
-                    <input type="range" id="noise" min="1" max="5" value={this.state.noiselvl} onChange={this.handleInputChange} />
+                    <input type="range" name="noiselvl" min="1" max="5" value={this.state.noiselvl} onChange={this.handleInputChange} />
                 </p>
 
                 <label>Activity Physical Level</label>
                 <p className="range-field">
-                    <input type="range" id="physical" min="1" max="5" value={this.state.physicallvl} onChange={this.handleInputChange} />
+                    <input type="range" name="physicallvl" min="1" max="5" value={this.state.physicallvl} onChange={this.handleInputChange} />
                 </p>
 
                 <p>
                     <label>
-                        <input type="checkbox" value={this.state.items} onChange={this.handleInputChange} />
+                        <input name="items" type="checkbox" value="false" onChange={(this.handleCheckboxChange)} />
                         <span>I can use items right now</span>
                     </label>
                 </p>
@@ -66,6 +74,8 @@ class Filter extends Component {
                 <button className="waves-effect waves-light btn-small" type="submit" onClick={event => this.handleFormSubmit(event)}>Submit</button>
 
             </form>
+            </div>
+            </div>
         )
     };
 };
