@@ -7,7 +7,7 @@ class Filter extends Component {
             location: "",
             noiselvl: 3,
             physicallvl: 3,
-            items: []
+            items: null
         }
         this.handleInputChange = this.handleInputChange.bind(this);
     }
