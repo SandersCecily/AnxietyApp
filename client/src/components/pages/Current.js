@@ -49,7 +49,6 @@ class Current extends Component {
   }
 
   loadRemedies = () => {
-    console.log("1")
     API.getRemedy()
       .then(res =>{
         console.log("this is the response", res)

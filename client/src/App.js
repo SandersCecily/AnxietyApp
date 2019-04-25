@@ -14,7 +14,7 @@ import PrivateRoute from "./routes/PrivateRoutes";
 import "./App.css";
 
 function App() {
-  let state = { loading: true, authenticated: false, user: null };
+  // let state = { loading: true, authenticated: false, user: null };
   // componentWillMount() {
   //   app.auth().onAuthStateChanged(user => {
   //     if (user) {
@@ -46,7 +46,8 @@ function App() {
             <Route exact path='/anxious' component={Current} />
             <Route exact path='/signUp' component={SignUp} />
             {/* <Route exact path='/login' component={Login} /> */}
-            <PrivateRoute exact path="/account" component={Account} authenticated={this.state.authenticated}/>
+            <PrivateRoute exact path="/account" component={Account}/> 
+            {/* authenticated={this.state.authenticated} */}
         </Router>
       </div>
     </div>
