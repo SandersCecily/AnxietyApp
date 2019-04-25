@@ -3,7 +3,7 @@ import Nav from "./components/Nav";
 import Sidebar from "./components/Sidebar";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./components/pages/Home";
-// import Login from "./components/pages/Login";
+import Login from "./components/pages/Login";
 import SignUp from "./components/pages/SignUp";
 import Contact from "./components/pages/Contact";
 import About from "./components/pages/About";
@@ -45,7 +45,7 @@ function App() {
             <Route exact path='/future' component={FutureAnx} />
             <Route exact path='/anxious' component={Current} />
             <Route exact path='/signUp' component={SignUp} />
-            {/* <Route exact path='/login' component={Login} /> */}
+            <Route exact path='/login' component={Login} />
             <PrivateRoute exact path="/account" component={Account}/> 
             {/* authenticated={this.state.authenticated} */}
         </Router>

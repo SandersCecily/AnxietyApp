@@ -24,7 +24,7 @@ const LogInView = ({ onSubmit }) => {
           />
         </label>
         <button type="submit">Log in</button>
-        <button><a>Go to Sign Up</a></button>
+        <button><a href="/signup">Go to Sign Up</a></button>
       </form>
     </div>
   );
