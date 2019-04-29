@@ -3,8 +3,7 @@ const remedyController = require("../../controllers/remedyController");
 
 // Matches with "/api/remedy"
 router
-  .get("/", remedyController.findAll)
-  .post("/", remedyController.create);
+  .get("/", remedyController.findAll);
 
 // Matches with "/api/remedy/:id"
 

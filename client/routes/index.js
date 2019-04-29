@@ -1,17 +1,18 @@
 const path = require("path");
-// const router = require("express").Router();
-const express = require("express");
-const app = express();
-const apiRoutes = require("./api");
+const router = require("express").Router();
+const remedyController = require("../controllers/remedyController");
+
+// const express = require("express");
 
 // API Routes
-// app.use("/api", apiRoutes);
-app.get("/api", function(req, res){
-  res.json({success: true});
-})
+// router.use("/api", apiRoutes);
+router.get("/api", remedyController.findAll);
+
+//post
+router.post("/")
 
 // If no API routes are hit, send the React app
-app.use(function (req, res) {
+router.use(function (req, res) {
   res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
 

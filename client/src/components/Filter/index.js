@@ -22,11 +22,8 @@ class Filter extends Component {
 
     handleFormSubmit = event => {
         event.preventDefault();
-        alert("Roger roger! \n" 
-        +"Location: " +this.state.location + "\n"
-        +"Noise: " +this.state.noiselvl +"\n"
-        +"Physical: " +this.state.physicallvl +"\n"
-        +"Items: " +this.state.items);
+        // this filter works.
+        // use data to filter on current
     };
 
     render() {
@@ -66,7 +63,7 @@ class Filter extends Component {
 
                 <p>
                     <label>
-                        <input name="items" type="checkbox" value="false" onChange={(this.handleCheckboxChange)} />
+                        <input name="items" type="checkbox" value="false" onChange={(this.handleInputChange)} />
                         <span>I can use items right now</span>
                     </label>
                 </p>

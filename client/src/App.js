@@ -46,7 +46,8 @@ function App() {
             <Route exact path='/anxious' component={Current} />
             <Route exact path='/signUp' component={SignUp} />
             <Route exact path='/login' component={Login} />
-            <PrivateRoute exact path="/account" component={Account}/> 
+            <Route exact path='/account' component={Account} />
+            {/* <PrivateRoute exact path="/account" component={Account} />  */}
             {/* authenticated={this.state.authenticated} */}
         </Router>
       </div>
