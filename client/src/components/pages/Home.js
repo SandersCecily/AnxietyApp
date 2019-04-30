@@ -1,9 +1,5 @@
 import React, {Component} from "react";
 import { BrowserRouter as Link } from 'react-router-dom';
-// import Contact from "../Contact";
-// import About from "../About/About";
-// import FutureAnx from "../FutureAnx/FutureAnx";
-// import Current from "../Current/Current";
 
 class Home extends Component {
     render() {

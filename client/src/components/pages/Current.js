@@ -22,8 +22,8 @@ function shuffle(array) {
   return array;
 };
 
+//this is your index variable
 var click = 0;
-var remedies = [];
 
 class Current extends Component {
 
@@ -39,10 +39,7 @@ class Current extends Component {
     API.getRemedy()
       .then(res => {
         this.setState({ objects: res.data })
-        for (let i = 0; i < res.data.length; i++) {
-          remedies.push(res.data[i].description);
-        }
-        shuffle(remedies);
+        shuffle(this.state.objects);
       })
       .catch(err => console.log(err));
   };
@@ -50,16 +47,20 @@ class Current extends Component {
   //onclick 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (remedies[click] === "undefined") {
+    if (this.state.objects[click] === undefined) {
       click = 0;
-      shuffle(remedies);
-      document.getElementById("desc").innerHTML = remedies[click];;
-      click++;
+      shuffle(this.state.objects);
     }
     else {
-      document.getElementById("desc").innerHTML = remedies[click];;
-      click++;
+      document.getElementById("desc").innerHTML = this.state.objects[click].description;
+      if (this.state.objects[click].things_needed !== undefined) {
+        document.getElementById("things").innerHTML = this.state.objects[click].things_needed;
+      }
+      else {
+        document.getElementById("things").innerHTML = "";
+      }
     }
+    click++;
   };
 
   render() {
@@ -74,8 +75,8 @@ class Current extends Component {
           </div>
           <div className="col s7 center-align" id="remedies">
             {/* Make a Favorite Star in Here */}
-            <p id="desc"></p>
-            <ul id="things"></ul>
+            <p id="desc" className="flow-text"></p>
+            <p id="things" className="flow-text"></p>
           </div>
           <div className="col 2">
           </div>

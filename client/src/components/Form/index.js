@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import API from "../../utils/API";
 
 class Form extends Component {
     constructor(props) {
@@ -24,14 +25,28 @@ class Form extends Component {
 
     handleFormSubmit = event => {
         event.preventDefault();
-        alert("Roger roger! \n" 
+        // alert("Roger roger! \n" 
         // +"Description: " +this.state.desc + "\n"
-        // +"Location: " +this.state.location + "\n" returns "true"
+        // +"Location: " +this.state.location + "\n" //returns "true"
         // +"Noise: " +this.state.noiselvl +"\n"
         // +"Physical: " +this.state.physicallvl +"\n"
-        // +"Items: " +this.state.items
-        // +"List: " +this.state.itemslist + "\n" returns "on"
-        );
+        // +"Items: " +this.state.items+ "\n" //returns "on"
+        // +"List: " + 
+        // );
+        if (this.state.items === "on"){
+            var items = true;
+        }else {
+             items=false;
+        }
+        API.saveSuggestion({
+            description: this.state.desc,
+            location: this.state.location,
+            noiselvl: this.state.noiselvl,
+            physicallvl: this.state.physicallvl,
+            things_needed: this.state.itemslist,
+            if_required: items
+          })
+            .catch(err => console.log(err));
     };
 
     render() {
@@ -41,7 +56,6 @@ class Form extends Component {
                 <label for="desc">Tell us what you do to calm down</label>
                 <textarea name="desc" class="materialize-textarea" value={this.state.desc} onChange={this.handleInputChange}></textarea>
                
-                
                 <label>This activity works at...</label>
                 <p>
                     <label>

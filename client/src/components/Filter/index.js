@@ -22,7 +22,14 @@ class Filter extends Component {
 
     handleFormSubmit = event => {
         event.preventDefault();
-        // this filter works.
+        alert("Roger roger! \n" 
+        // +"Description: " +this.state.desc + "\n"
+        // +"Location: " +this.state.location + "\n" returns "true"
+        // +"Noise: " +this.state.noiselvl +"\n"
+        // +"Physical: " +this.state.physicallvl +"\n"
+        // +"Items: " +this.state.items
+        // +"List: " +this.state.itemslist + "\n" returns "on"
+        );
         // use data to filter on current
     };
 
