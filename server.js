@@ -7,7 +7,7 @@ const routes = require("./client/routes");
 //connect to mongoose
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true } || "mongodb://localhost/anxietyapp");
 var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 //server start
 app.use(express.urlencoded({ extended: true }));

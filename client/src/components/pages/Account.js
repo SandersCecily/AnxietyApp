@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import Chatbox from "../Chat/Chatbox";
 
 class Account extends Component {
+
     render() {
         return (
             <div className="container">
@@ -18,7 +20,7 @@ class Account extends Component {
                     </div>
                 </div>
                 <div className="row">
-
+                    <Chatbox />
                 </div>
             </div>
         )
