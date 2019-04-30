@@ -17,6 +17,9 @@ class Account extends Component {
                         <p>This is for col 3</p>
                     </div>
                 </div>
+                <div className="row">
+
+                </div>
             </div>
         )
     }

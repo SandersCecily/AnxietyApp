@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3001;
 const mongoose = require("mongoose");
-const routes = require("./routes");
+const routes = require("./client/routes");
 
 //connect to mongoose
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true } || "mongodb://localhost/anxietyapp");

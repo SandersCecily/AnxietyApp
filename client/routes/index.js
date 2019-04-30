@@ -1,11 +1,11 @@
 const path = require("path");
 const router = require("express").Router();
-const remedyController = require("../client/controllers/remedyController");
-const suggestionController = require("../client/controllers/suggestionController");
+const remedyController = require("../controllers/remedyController");
+const suggestionController = require("../controllers/suggestionController");
 
 // const express = require("express");
 
-// API Routes
+// API Route
 router.get("/api", remedyController.findAll);
 
 //post
