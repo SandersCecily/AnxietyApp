@@ -1,5 +1,4 @@
 const path = require("path");
-// const router = require("express").Router();
 const express = require("express");
 const app = express();
 const apiRoutes = require("./api");

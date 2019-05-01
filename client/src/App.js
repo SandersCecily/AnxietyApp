@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from "react";
 import Nav from "./components/Nav";
 import Sidebar from "./components/Sidebar";
 import { BrowserRouter as Router, Route } from "react-router-dom";
@@ -14,8 +14,9 @@ import FutureAnx from "./components/pages/FutureAnx";
 // import PrivateRoute from "./routes/PrivateRoutes";
 import "./App.css";
 
-function App() {
-  // let state = { loading: true, authenticated: false, user: null };
+export default class App extends Component {
+  // state = { loading: true, authenticated: false, user: null };
+  
   // componentWillMount() {
   //   app.auth().onAuthStateChanged(user => {
   //     if (user) {
@@ -33,13 +34,19 @@ function App() {
   //     }
   //   });
   // }
+  render() {
+    // const { authenticated, loading } = this.state;
 
-  return (
-    <div id="App">
-      <Nav />
-      <Sidebar />
-      <div id="page-wrap">
-        <Router>
+    // if (loading) {
+    //   return <p>Loading..</p>;
+    // }
+
+    return (
+      <div id="App">
+        <Nav />
+        <Sidebar />
+        <div id="page-wrap">
+          <Router>
             <Route exact path='/' component={Home} />
             <Route exact path='/contact' component={Contact} />
             <Route exact path='/about' component={About} />
@@ -53,8 +60,6 @@ function App() {
             {/* authenticated={this.state.authenticated} */}
         </Router>
       </div>
-    </div>
-  );
+    );
+  }
 }
-
-export default App;
