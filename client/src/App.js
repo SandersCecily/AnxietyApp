@@ -3,14 +3,15 @@ import Nav from "./components/Nav";
 import Sidebar from "./components/Sidebar";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./components/pages/Home";
-import Login from "./components/pages/Login";
-import SignUp from "./components/pages/SignUp";
+import Chat from "./components/Chat/App";
+// import Login from "./components/pages/Login";
+// import SignUp from "./components/pages/SignUp";
 import Contact from "./components/pages/Contact";
 import About from "./components/pages/About";
-import Account from "./components/pages/Account";
+// import Account from "./components/pages/Account";
 import Current from "./components/pages/Current";
 import FutureAnx from "./components/pages/FutureAnx";
-import PrivateRoute from "./routes/PrivateRoutes";
+// import PrivateRoute from "./routes/PrivateRoutes";
 import "./App.css";
 
 function App() {
@@ -44,9 +45,10 @@ function App() {
             <Route exact path='/about' component={About} />
             <Route exact path='/future' component={FutureAnx} />
             <Route exact path='/anxious' component={Current} />
-            <Route exact path='/signUp' component={SignUp} />
-            <Route exact path='/login' component={Login} />
-            <Route exact path='/account' component={Account} />
+            <Route exact path='/chat' component={Chat} />
+            {/* <Route exact path='/signUp' component={SignUp} /> */}
+            {/* <Route exact path='/login' component={Login} /> */}
+            {/* <Route exact path='/account' component={Account} /> */}
             {/* <PrivateRoute exact path="/account" component={Account} />  */}
             {/* authenticated={this.state.authenticated} */}
         </Router>
