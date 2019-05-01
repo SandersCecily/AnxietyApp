@@ -9,7 +9,7 @@ const Chatkit = require("@pusher/chatkit-server");
 
 // If no API routes are hit, send the React app
 app.use(function (req, res) {
-  res.sendFile(path.join(__dirname, "../client/build/index.html"));
+  res.sendFile(path.join(__dirname, "../build/index.html"));
 });
 
 const chatkit = new Chatkit.default({
