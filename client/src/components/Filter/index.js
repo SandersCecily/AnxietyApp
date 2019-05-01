@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import API from "../../utils/API";
 
 class Filter extends Component {
     constructor(props) {
@@ -8,7 +7,8 @@ class Filter extends Component {
             location: "",
             noiselvl: 3,
             physicallvl: 3,
-            items: null
+            items: null,
+            objects: this.props.objects
         }
         this.handleInputChange = this.handleInputChange.bind(this);
     }
@@ -23,20 +23,22 @@ class Filter extends Component {
 
     handleFormSubmit = event => {
         event.preventDefault();
-        alert("Roger roger! \n"
-            // +"Description: " +this.state.desc + "\n"
-            // +"Location: " +this.state.location + "\n" returns "true"
-            // +"Noise: " +this.state.noiselvl +"\n"
-            // +"Physical: " +this.state.physicallvl +"\n"
-            // +"Items: " +this.state.items
-            // +"List: " +this.state.itemslist + "\n" returns "on"
-        );
+        // alert("Roger roger! \n"
+        //     +"Description: " +this.state.desc + "\n"
+        //     +"Location: " +this.state.location + "\n" //returns "true"
+        //     +"Noise: " +this.state.noiselvl +"\n"
+        //     +"Physical: " +this.state.physicallvl +"\n"
+        //     +"Items: " +this.state.items
+        // );
         // use data to filter on current
-        // API.getRemedy()
-        //     .then(res => {
-        //         this.setState({ objects: res.data })
-        //     })
-        //     .catch(err => console.log(err));
+        //cant use items
+        for (let i = 0; i<this.state.objects; i++){
+            if (!this.state.items || this.state.items === false){
+                var newarray = this.state.objects.filter(() => this.state.objects[i].items===false);
+            }
+        }
+        console.log(newarray);
+
 };
 
 render() {

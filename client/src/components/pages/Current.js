@@ -47,12 +47,9 @@ class Current extends Component {
   //onclick 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.objects[click] === "undefined") {
+    if (this.state.objects[click] === undefined) {
       click = 0;
-      shuffle(this.state.objects[click]);
-      // document.getElementById("desc").innerHTML = remedies[click];;
-      // click++;
-
+      shuffle(this.state.objects);
     }
     else {
       document.getElementById("desc").innerHTML = this.state.objects[click].description;
@@ -73,7 +70,7 @@ class Current extends Component {
           <h4>Here's a reccomendation to help...</h4>
         </div>
         <div className="row">
-          <div className="col s3 filter left-align pull-s2">
+          <div className="col s3 filter left-align pull-s1">
             <Filter />
           </div>
           <div className="col s7 center-align" id="remedies">

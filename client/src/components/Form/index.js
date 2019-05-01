@@ -48,6 +48,8 @@ class Form extends Component {
             if_required: items
         })
             .catch(err => console.log(err));
+
+            alert("Submitted");
     };
 
     render() {
