@@ -35,8 +35,11 @@ app.post("/authenticate", (req, res) => {
     res.json(chatkit.authenticate({grant_type, userId: req.query.user_id}));
 });
 
+
 //connect to mongoose
-mongoose.connect("mongodb://localhost/anxietyapp");
+mongoose.connect(
+    //process.env.MONGODB_URI, { useNewUrlParser: true } || 
+    "mongodb://localhost/anxietyapp");
 var db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
@@ -49,12 +52,6 @@ app.use(routes);
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("./client/build"));
 }
-
-// Send every request to the React app
-// Define any API routes before this runs
-// app.get("*", function (req, res) {
-//     res.sendFile(path.join(__dirname, "./client/build/index.html"));
-// });
 
 app.listen(PORT, function () {
     console.log(`🌎 ==> API server now on port ${PORT}!`);

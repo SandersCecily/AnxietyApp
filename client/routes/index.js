@@ -1,15 +1,15 @@
 const path = require("path");
 const router = require("express").Router();
 const remedyController = require("../controllers/remedyController");
+const suggestionController = require("../controllers/suggestionController");
 
 // const express = require("express");
 
-// API Routes
-// router.use("/api", apiRoutes);
+// API Route
 router.get("/api", remedyController.findAll);
 
 //post
-router.post("/")
+router.post("/", suggestionController.create);
 
 // If no API routes are hit, send the React app
 router.use(function (req, res) {

@@ -7,15 +7,21 @@ const helpSeed = [
   {
     location: ["home", "work", "public"],
     description: "Talk to someone supportive",
-    physicallvl: 1
+    noiselvl: 3,
+    physicallvl: 1,
+    things_needed: "",
+    if_required: false
   }, {
     location: ["home", "work", "public"],
     description: "Talk to yourself",
     noiselvl: 2,
-    physicallvl: 1
+    physicallvl: 1,
+    things_needed: "",
+    if_required: false
   }, {
     location: ["home", "public"],
     description: "Listen to something. Ex: Podcast, Audiobook, Music",
+    noiselvl: 3,
     physicallvl: 1,
     things_needed: "Heaphones, Internet Connection, Device to play sound",
     if_required: false
@@ -24,14 +30,15 @@ const helpSeed = [
     description: "Try a breathing excercise",
     noiselvl: 1,
     physicallvl: 1,
-    // -----INSERT A BREATHING GUIDE LINK----     https://dailyburn.com/life/wp-content/uploads/2016/04/circle-gif-2.gif
-    things_needed: "Breathing Guide",
+    things_needed: "Breathing Guide https://dailyburn.com/life/wp-content/uploads/2016/04/circle-gif-2.gif",
     if_required: false
   }, {
     location: ["home", "work", "public"],
     description: "Take a break by going on a walk",
     noiselvl: 2,
-    physicallvl: 3
+    physicallvl: 3,
+    things_needed:"",
+    if_required: false
   }, {
     location: ["home", "work", "public"],
     description: "Find or make something to drink",
@@ -57,10 +64,14 @@ const helpSeed = [
     location: ["home", "work", "public"],
     description: "Remember: What you're feeling is okay, this is just anxiety, you can get through this",
     noiselvl: 1,
-    physicallvl: 1
+    physicallvl: 1,
+    things_needed: "",
+    if_required: false
   }, {
     location: ["home"],
     description: "Take a shower, spend extra time on a body part you usually don't. EX: Ears, feet, hands",
+    noiselvl: 3,
+    physicallvl: 3,
     things_needed: "Shower, Soap",
     if_required: true
   }

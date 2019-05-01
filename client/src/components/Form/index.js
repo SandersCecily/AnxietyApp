@@ -25,14 +25,15 @@ class Form extends Component {
 
     handleFormSubmit = event => {
         event.preventDefault();
-        alert("Roger roger! \n"
+
+        //alert("Roger roger! \n"
             // +"Description: " +this.state.desc + "\n"
             // +"Location: " +this.state.location + "\n" returns "true"
             // +"Noise: " +this.state.noiselvl +"\n"
             // +"Physical: " +this.state.physicallvl +"\n"
             // +"Items: " +this.state.items
             // +"List: " +this.state.itemslist + "\n" returns "on"
-        );
+        //);
         if (this.state.items === "on") {
             var items = true;
         } else {

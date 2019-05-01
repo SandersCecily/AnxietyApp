@@ -21,6 +21,7 @@ function shuffle(array) {
   }
   return array;
 };
+
 //index var
 var click = 0;
 
@@ -51,6 +52,7 @@ class Current extends Component {
       shuffle(this.state.objects[click]);
       // document.getElementById("desc").innerHTML = remedies[click];;
       // click++;
+
     }
     else {
       document.getElementById("desc").innerHTML = this.state.objects[click].description;
@@ -76,8 +78,8 @@ class Current extends Component {
           </div>
           <div className="col s7 center-align" id="remedies">
             {/* Make a Favorite Star in Here */}
-            <p id="desc"></p>
-            <ul id="things"></ul>
+            <p id="desc" className="flow-text"></p>
+            <p id="things" className="flow-text"></p>
           </div>
           <div className="col 2">
           </div>

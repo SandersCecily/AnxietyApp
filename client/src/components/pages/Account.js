@@ -1,11 +1,15 @@
 import React, { Component } from "react";
+import Chatbox from "../Chat/Chatbox";
 
 class Account extends Component {
+
     render() {
         return (
             <div className="container">
                 <div className="row">
                     <h3>Welcome to your User Dashboard</h3></div>
+                    <h5></h5>
+                    <hr/>
                 <div className="row">
                     <div className="col s4">
                         <p>This is for col 1</p>
@@ -16,6 +20,9 @@ class Account extends Component {
                     <div className="col s4">
                         <p>This is for col 3</p>
                     </div>
+                </div>
+                <div className="row" id="chatbox">
+                    <Chatbox />
                 </div>
             </div>
         )
