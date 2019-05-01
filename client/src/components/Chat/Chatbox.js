@@ -1,23 +1,31 @@
 import React, { Component } from "react";
 import Chatkit from "@pusher/chatkit";
 import MessageList from "./MessageList";
+import CaptureField from "./CaptureField";
 
 class Chatbox extends Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state = {
-            messages: ["hello"]
+            currentRoomId: 19393759,
+            messages: []
         }
+        this.sendMessage = this.sendMessage.bind(this)
+    }
+
+    sendMessage(text) {
+        this.currentUser.sendMessage({text, roomId: this.state.currentRoomId});
     }
 
     componentDidMount() {
+        const tokenProvider = new Chatkit.TokenProvider({
+            url: "http://localhost:3000/account?"
+          });
+          
         const chatManager = new Chatkit.ChatManager({
             instanceLocator: "v1:us1:5e63b8ba-6245-4e8e-b012-620880114b6c",
             userId: "admin",
-            tokenProvider: new Chatkit.TokenProvider({
-                url: "https://us1.pusherplatform.io/services/chatkit_token_provider/v1/5e63b8ba-6245-4e8e-b012-620880114b6c/token"
-                //add your own url
-            })
+            tokenProvider: tokenProvider
         });
 
         chatManager.connect()
@@ -40,10 +48,7 @@ class Chatbox extends Component {
         return (
             <div id="chatroom">
                 <MessageList messages={this.state.messages} />
-                <form id="message-form">
-                    <input type='text' id='message-text' />
-                    <input type="submit" />
-                </form>
+                <CaptureField sendMessage={this.sendMessage}/>
             </div>
         )
     }

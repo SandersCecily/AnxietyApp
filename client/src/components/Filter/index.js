@@ -32,11 +32,11 @@ class Filter extends Component {
             // +"List: " +this.state.itemslist + "\n" returns "on"
         );
         // use data to filter on current
-        API.getRemedy()
-            .then(res => {
-                this.setState({ objects: res.data })
-            })
-            .catch(err => console.log(err));
+        // API.getRemedy()
+        //     .then(res => {
+        //         this.setState({ objects: res.data })
+        //     })
+        //     .catch(err => console.log(err));
 };
 
 render() {
