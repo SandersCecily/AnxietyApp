@@ -5,7 +5,9 @@ const mongoose = require("mongoose");
 const routes = require("./client/routes");
 
 //connect to mongoose
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true } || "mongodb://localhost/anxietyapp");
+mongoose.connect(
+    //process.env.MONGODB_URI, { useNewUrlParser: true } || 
+    "mongodb://localhost/anxietyapp");
 var db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
