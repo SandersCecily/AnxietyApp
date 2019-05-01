@@ -36,7 +36,7 @@ app.post("/authenticate", (req, res) => {
 });
 
 //connect to mongoose
-mongoose.connect("mongodb://localhost/anxietyapp");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/anxietyapp");
 var db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
