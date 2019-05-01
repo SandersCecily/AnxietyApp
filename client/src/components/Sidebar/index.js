@@ -15,8 +15,8 @@ export default props => {
                 <i className="material-icons left">restore</i>Long Term Help</a>
             <a className="menu-item waves-effect waves-light" href="/contact">
                 <i className="material-icons left">comment</i>Contact</a>
-            <a href="/login" className="menu-item waves-effect waves-light">
-                <i className="material-icons left">face</i>Log In</a>
+            <a href="/chat" className="menu-item waves-effect waves-light">
+                <i className="material-icons left">face</i>Chatroom</a>
         </Menu>
     )
 };

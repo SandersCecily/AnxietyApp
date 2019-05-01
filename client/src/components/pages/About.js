@@ -9,7 +9,7 @@ class About extends Component {
                 </div>
                 <div className="row">
                     <div className="col">
-                        <h4>What is Anxiety?</h4>
+                    <h4>What is Anxiety?</h4>
                         <p className="flow-text">
                             Generally speaking anxiety is an emotional response that every human can experience. People most often think of anxiety when they imagine public speaking. For some that is a form of anxiety but it's important to know that type of anxiety isn't what doctors are diagnosing when they treat a patient. </p>
                         <p className="flow-text">
@@ -21,7 +21,7 @@ class About extends Component {
                         <br />
                         <h4>Why do people suffer from it?</h4>
                         <p className="flow-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu magna nec felis semper tincidunt. Maecenas posuere accumsan sodales. Vestibulum ornare eros sodales nunc porta, vitae consequat orci eleifend. Nullam pretium vehicula ornare. Pellentesque turpis eros, sagittis sit amet risus quis, aliquam dignissim metus. Cras nec tortor tellus. Phasellus consequat neque magna, non bibendum mauris molestie nec. Cras sollicitudin commodo consectetur. Maecenas viverra libero quis elit volutpat aliquam. Morbi et arcu convallis, ultricies ligula vel, volutpat mi. In at risus a urna mollis porttitor. Ut posuere arcu suscipit justo sodales mattis.</p>
+                            There are a number of reasons that someone can suffer from an anxiety disorder and part of that is dependent on which anxiety disorder as well as what's surrounding it. Its true that some anxiety disorders are something that people are naturally born with, but some are more dispositioned to it, while other people can go through immense trauma and from that point suffer from these types of issues.</p>
                         <br />
                         <h4>How can I help?</h4>
                         <p className="flow-text">

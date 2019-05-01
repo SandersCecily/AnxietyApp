@@ -22,7 +22,7 @@ function shuffle(array) {
   return array;
 };
 
-//this is your index variable
+//index var
 var click = 0;
 
 class Current extends Component {
@@ -47,9 +47,12 @@ class Current extends Component {
   //onclick 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.objects[click] === undefined) {
+    if (this.state.objects[click] === "undefined") {
       click = 0;
-      shuffle(this.state.objects);
+      shuffle(this.state.objects[click]);
+      // document.getElementById("desc").innerHTML = remedies[click];;
+      // click++;
+
     }
     else {
       document.getElementById("desc").innerHTML = this.state.objects[click].description;
