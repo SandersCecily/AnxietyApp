@@ -20,11 +20,11 @@ export default class App extends Component {
         <div id="page-wrap">
           <Router>
             <Route exact path='AnxietyApp/' component={Home} />
-            <Route exact path='AnxietyApp//contact' component={Contact} />
-            <Route exact path='AnxietyApp//about' component={About} />
-            <Route exact path='AnxietyApp//future' component={FutureAnx} />
-            <Route exact path='AnxietyApp//anxious' component={Current} />
-            <Route exact path='AnxietyApp//chat' component={Chat} />
+            <Route exact path='AnxietyApp/contact' component={Contact} />
+            <Route exact path='AnxietyApp/about' component={About} />
+            <Route exact path='AnxietyApp/future' component={FutureAnx} />
+            <Route exact path='AnxietyApp/anxious' component={Current} />
+            <Route exact path='AnxietyApp/chat' component={Chat} />
             {/* <Route exact path='/signUp' component={SignUp} /> */}
             {/* <Route exact path='/login' component={Login} /> */}
         </Router>
