@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.0/workbox-sw.js");
 
 importScripts(
-  "/AnxietyApp/precache-manifest.421fc6f66259aae480924b5f440dabce.js"
+  "/AnxietyApp/precache-manifest.ad1cc904d322089be7442f019cd7dc39.js"
 );
 
 self.addEventListener('message', (event) => {
