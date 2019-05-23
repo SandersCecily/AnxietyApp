@@ -47,7 +47,7 @@ export default class App extends Component {
         <Sidebar />
         <div id="page-wrap">
           <Router>
-            <Route exact path='/' component={Home} />
+            <Route component={Home} />
             <Route exact path='/contact' component={Contact} />
             <Route exact path='/about' component={About} />
             <Route exact path='/future' component={FutureAnx} />
