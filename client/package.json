@@ -7,7 +7,7 @@
   "dependencies": {
     "@pusher/chatkit": "^0.7.18",
     "@pusher/chatkit-client": "^1.5.0",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "dotenv": "^7.0.0",
     "react": "^16.8.6",
     "react-burger-menu": "^2.6.9",
